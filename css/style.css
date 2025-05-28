@@ -5,6 +5,7 @@
 :root {
 	--nav-color: #5f687b;
 	--background-color: #ffffff;
+	--background-color-light:#F9F9F9;
 	--default-color: #444444;
 	--heading-color: #5f687b;
 	--accent-color: #10bc69;
@@ -222,23 +223,23 @@ ul {
 /* margin-x starts */
 
 .mx-1 {
-	margin: 1rem 0;
+	margin: 0 1rem;
 }
 
 .mx-2 {
-	margin: 2rem 0;
+	margin: 0 2rem;
 }
 
 .mx-3 {
-	margin: 3rem 0;
+	margin: 0 3rem;
 }
 
 .mx-4 {
-	margin: 4rem 0;
+	margin: 0 4rem;
 }
 
 .mx-5 {
-	margin: 5rem 0;
+	margin: 0 5rem;
 }
 
 /* margin-x ends  */
@@ -419,7 +420,7 @@ header {
 	/* border: 1px solid red; */
 }
 
-.main a h1 {
+header a h1 {
 	font-size: 1.875rem;
 	font-weight: 700;
 	font-family: "Raleway", sans-serif;
@@ -427,7 +428,7 @@ header {
 }
 
 /* navigation section starts */
-.main .navbar>ul>li>a {
+header .navbar>ul>li>a {
 	color: var(--nav-color);
 	font-size: 1rem;
 	font-weight: 400;
@@ -437,15 +438,15 @@ header {
 	position: relative;
 }
 
-.main .navbar ul li a:hover {
+header .navbar ul li a:hover {
 	color: var(--accent-color);
 }
 
-.main .dropdown-i {
+header .dropdown-i {
 	display: none;
 }
 
-.main .dropdown-i ul,
+header .dropdown-i ul,
 .dropdown-i .subdropdown-i ul {
 	cursor: pointer;
 	color: var(--nav-color);
@@ -460,40 +461,40 @@ header {
 	z-index: 10;
 }
 
-.main .dropdown-i ul li a {
+header .dropdown-i ul li a {
 	/* width: 150px; */
 	padding: 15px 20px;
 }
 
-.main .navbar ul li:nth-child(6):hover .dropdown-i {
+header .navbar ul li:nth-child(6):hover .dropdown-i {
 	display: block;
 }
 
-.main .subdropdown-i {
+header .subdropdown-i {
 	display: none;
 	position: absolute;
 	top: 20%;
 	left: -95%;
 }
 
-.main .dropdown-i ul li:nth-child(2):hover .subdropdown-i {
+header .dropdown-i ul li:nth-child(2):hover .subdropdown-i {
 	display: block;
 }
 
-.main .dropdown-i ul li:nth-child(2):hover > a{
+header .dropdown-i ul li:nth-child(2):hover > a{
 	color: var(--accent-color);
 }
 
-.main .dropdown-i .subdropdown-i:hover ~ ul li:nth-child(2) > a{
+header .dropdown-i .subdropdown-i:hover ~ ul li:nth-child(2) > a{
 	color: var(--accent-color);
 }
 
-.main .navbar i {
+header .navbar i {
 	font-size: 0.8rem;
 	margin-left: 0.5rem;
 }
 
-.main .started-btn {
+header .nav-btn{
 	background-color: var(--accent-color);
 	font-size: 1rem;
 	font-family: "Roboto", sans-serif;
@@ -503,15 +504,20 @@ header {
 	margin-left: 30px;
 }
 
-.main .started-btn:hover{
+header .nav-btn:hover{
 	background-color: color-mix(in srgb, var(--accent-color), var(--contrast-color) 10%);
 }
+
+.navbar .toggle-btn{
+	display: none;
+}
+
 
 /* navigation section ends  */
 
 /* hero section starts  */
 
-header .hero {
+main .hero {
 	padding-top: 120px;
 	padding-bottom: 20px;
 }
@@ -772,6 +778,7 @@ header .hero {
 /* services section starts */
 
 .services{
+	background-color: var(--background-color-light);
 	padding: 60px 0;
 }
 
@@ -850,3 +857,173 @@ header .hero {
 	color: var(--default-color);
 }
 /* services section ends  */
+/* Portfolio section starts  */
+
+
+.portfolio{
+	padding: 60px 0;
+	background-color:var(--background-color);
+	color: var(--default-color);
+}
+
+.portfolio .portfolio-title{
+	flex-direction: column;
+}
+
+.portfolio .portfolio-title h3{
+	color: var(--heading-color);
+	text-transform: uppercase;
+	font-size: 2rem;
+	font-weight: 700;
+	font-family: Raleway,sans-serif;
+	margin-bottom: 1rem;
+}
+
+.portfolio .portfolio-title p{
+	font-size: 1rem;
+	font-weight: 400;
+	font-family: Roboto,sans-serif;
+}
+
+
+.portfolio .navbar ul li{
+	cursor: pointer;
+	font-family: Roboto,sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0 10px;
+	margin-bottom: 5px;
+	transition: all 0.3s ease-in-out;
+}
+
+.portfolio .navbar ul li:hover{
+	color: var(--accent-color);
+}
+
+ */ 
+/* Portfolio section ends */
+
+/* footer section starts  */
+.footer {
+    background-color: var(--background-color-light);
+    color: var(--default-color);
+    font-size: 0.9rem;
+}
+
+.footer .footer-info h3 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+.footer .footer-info p {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+}
+
+.footer .footer-links {
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-links h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    font-family: "Raleway", sans-serif;
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-links ul li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer .footer-links ul li i {
+    font-size: 0.7rem;
+    margin-right: 0.625rem;
+    color: var(--accent-color);
+}
+
+.footer .footer-links ul li a {
+    color: var(--default-color);
+    transition: 0.3s;
+}
+
+.footer .footer-links ul li a:hover {
+    color: var(--accent-color);
+}
+
+.footer .footer-newsletter h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    font-family: "Raleway", sans-serif;
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-newsletter p {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.footer .footer-newsletter form {
+    background-color: var(--contrast-color);
+    padding: 6px 10px;
+    position: relative;
+    border-radius: 50px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
+    display: flex;
+}
+
+.footer .footer-newsletter form input[type="email"] {
+    border: 0;
+    padding: 4px 8px;
+    width: calc(100% - 100px); 
+    border-radius: 50px;
+}
+
+.footer .footer-newsletter form input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    background: none;
+    font-size: 1rem;
+    padding: 0 20px;
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    transition: 0.3s;
+    border-radius: 50px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.footer .footer-newsletter form input[type="submit"]:hover {
+    background-color: color-mix(in srgb, var(--accent-color), var(--contrast-color) 15%);
+}
+
+.footer .copyright {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+    font-family: "Roboto", sans-serif;
+    color: var(--heading-color);
+}
+
+.footer .copyright .credits {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.footer .copyright .credits a {
+    color: var(--accent-color);
+}
+
+
+/* footer section ends */
